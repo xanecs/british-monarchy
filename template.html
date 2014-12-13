@@ -51,7 +51,7 @@ URL: https://code.google.com/p/io-2012-slides
       <ul>
         <li>I don't know yet</li>
         <li>How to: Become the British Monarch</li>
-        <li>Subtitle capitalization is title case</li>
+        <li>Cost of the British Monarchy</li>
         <li>Titles and subtitles should never have a period at the end</li>
       </ul>
     </article>
@@ -78,35 +78,74 @@ URL: https://code.google.com/p/io-2012-slides
 
   <slide>
     <hgroup>
-      <h2>Prerequisites</h2>
+      <h2>The Rules</h2>
     </hgroup>
     <article>
-      <p>If you want to become British Monarch:</p>
-      <ul>
-        <li><span class="red">Don't</span> be Catholic</li>
-        <li>Don't be a Bastard</li>
-        <li>Marriage doesn't count</li>
-      </ul>
+      <h3><span class="red">Don't</span> be Catholic</h3>
+      <p>The British Monarch is the head of the Church of England</p>
+      <h3>Don't be a Bastard</h3>
+      <p>Your parents have to be married before you're born</p>
+      <h3>Marriage doesn't count</h3>
+      <p>The spouses of the Monarch don't have any powers</p>
     </article>
   </slide>
 
   <slide>
     <hgroup>
-      <h2>Slide with (Smaller Font)</h2>
+      <h2>Algorithm of inheritance</h2>
+      <h3>Male Primogeniture</h3>
     </hgroup>
-    <article class="smaller">
-      <ul>
-        <li>All <a href="http://google.com">links</a> open in new tabs.</li>
-        <li>To change that this, add <code>target="_self"</code> to the link.</li>
-      </ul>
+    <article>
+      <pre class="prettyprint" data-lang="javascript">
+function MalePrimogeniture (monarch) {
+  if (!monarch.hasChildren) {
+    return MalePrimogeniture(monarch.previous);
+  }
+
+  if (monarch.hasSons) {
+    return monarch.sons.eldest;
+  }
+  else if (monarch.hasDaughters) {
+    return monarch.daughters.eldest;
+  }
+}
+      </pre>
     </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Algorithm of inheritance</h2>
+      <h3>Male Primogeniture</h3>
+    </hgroup>
+    <article>
+        <h3>If the (now dead) Monarch has no children</h3>
+        <p>Apply the rules to the previous Monarch</p>
+        <h3>If the (now dead) Monarch has one or more sons</h3>
+        <p>The eldest or only son becomes King</p>
+        <h3>If the (now dead) Monarch has one or more daughters</h3>
+        <p>The eldest daughter becomes Queen</p>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/res/situation_1-01.png)">
+    <hgroup>
+      <h2>Who gets the crown?</h2>
+    </hgroup>
+  </slide>
+
+  <slide class="">
+    <hgroup class="flexbox vcenter hcenter">
+      <h3>Change in 2014</h3>
+      <h2><span class="fadeout"><del>Male</del></span> Primogeniture</h2>
+    </hgroup>
   </slide>
 
   <slide class="segue dark nobackground">
     <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
     <hgroup class="auto-fadein">
-      <h2>Segue Slide</h2>
-      <h3>Subtitle Placeholder</h3>
+      <h2>Debate about the British Monarchy</h2>
+      <h3>&laquo;Get rid of it already!&raquo;</h3>
     </hgroup>
   </slide>
 
